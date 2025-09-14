@@ -12,21 +12,66 @@
 
         @media screen and (max-width: 600px) {
 
-            .section-sobre p {
-                width: 90%;
-            }
-
-            .practice-container {
-                flex-direction: column;
-                gap: 20px;
-                align-items: center;
-            }
-
-            .practice-box {
-                width: 90%;
-            }
+        body {
+            font-size: 14px;
         }
 
+        input, button, textarea {
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        header nav ul {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+        header li {
+            padding: 5px 0;
+        }
+
+        #hero h1, #hero h2 {
+            font-size: 35px;
+        }
+        #hero p {
+            font-size: 18px;
+            padding: 0 10px;
+        }
+
+        .section-sobre p {
+            width: 90%;
+            margin: 0 auto;
+            padding: 0 10px;
+        }
+
+        #about img {
+            width: 200px;
+            height: 200px;
+            margin: 20px auto;
+            float: none;
+        }
+
+        .practice-container {
+            flex-direction: column; 
+            align-items: center; 
+            gap: 20px; 
+        }
+
+        .practice-box {
+            width: 90%; 
+        }
+
+        .section-title, .section-sobre {
+            font-size: 28px;
+            text-align: center;
+            padding: 0 10px;
+        }
+
+        .footer {
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
         .container {
             width: 100%;
             overflow: hidden;
