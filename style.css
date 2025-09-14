@@ -11,12 +11,19 @@
         }
 
         @media screen and (max-width: 600px) {
-            body {
-                font-size: 14px;
+
+            .section-sobre p {
+                width: 90%;
             }
-            input, button {
-                width: 100%;
-                box-sizing: border-box;
+
+            .practice-container {
+                flex-direction: column;
+                gap: 20px;
+                align-items: center;
+            }
+
+            .practice-box {
+                width: 90%;
             }
         }
 
