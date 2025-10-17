@@ -130,10 +130,10 @@ header .sup-top a {
 
 /* Botão Flutuante Wpp*/
 .centralizar-na-pagina {
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-    height: 40px;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  height: 40px;
 }
 
 .fale-ground {
@@ -978,13 +978,20 @@ section {
     display: none;
   }
 
-  .logo {
-    left: 50px;
-  }
-
   .logo img {
     width: 500px;
     height: 500px;
+    margin-left: -30px;
+    margin-top: 30px;
+  }
+
+  .slides-container {
+    width: 100%;
+    height: 400px;
+  }
+
+  .header-content {
+    margin-bottom: -200px;
   }
 
   .container, .container1 {
@@ -1017,10 +1024,6 @@ section {
     display: none;
   }
 
-  .footer-content-wrap {
-    margin-left: 0;
-  }
-
   .locations {
      display: none;
   }
@@ -1040,6 +1043,10 @@ section {
 
   .title {
     margin-bottom: 380px;
+  }
+
+  .rede-social {
+    margin-left: -20px;
   }
 }
 
@@ -1064,6 +1071,7 @@ section {
     width: 300px;
     height: 300px;
     margin-left: -35px;
+    margin-top: 50px;
   }
 
   .foto-apr {
@@ -1093,6 +1101,15 @@ section {
 
   .footer-content-wrap {
     margin-left: 0;
+  }
+
+  .slides-container {
+    width: 100%;
+    height: 300px;
+  }
+
+  .header-content {
+    margin-bottom: -300px;
   }
 
   .logo-rodape {
@@ -1128,6 +1145,118 @@ section {
 
   .footer-info p {
     font-size: 10px;
+  }
+}
+
+@media (max-width: 414px) {
+  .container, .container1 {
+    width: 100%;
+    padding: 10px;
+    margin: 0;
+  }
+
+  #menu-main {
+    display: none;
+  }
+
+  .cards-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .cards-container {
+    margin-top: 40px;
+  }
+
+  .logo img {
+    width: 230px;
+    height: 230px;
+    margin-left: -55px;
+    margin-top: 80px;
+  }
+
+  .foto-apr {
+    display: none;
+  }
+
+  .card-logo {
+    display: none;
+  }
+
+  .bgblue {
+    margin-left: -85px;
+    width: 380px;
+    height: auto;
+  }
+
+  .card-apresentacao {
+    width: auto;
+    height: auto;
+    font-size: 1.2rem;
+  }
+
+  .footer {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-content-wrap {
+    margin-left: 0;
+  }
+
+  .rede-social {
+    width: 170px;
+    height: 170px;
+    margin-bottom: -50px;
+  }
+
+  .logo-rodape {
+    display: none;
+  }
+
+  .flip-card {
+    width: 300px;
+    height: 300px;
+  }
+
+  .form-container {
+    padding: 5px;
+    margin: 0;
+    width: 380px;
+    height: 390px;
+  }
+  .input, .textarea {
+      width: 100%;
+      box-sizing: border-box;
+  }
+
+  .section-title {
+    margin-bottom: -20px;
+    font-size: 2rem;
+  }
+
+  .section-title1 {
+    font-size: 2rem;
+  }
+
+  .slides-container {
+    width: 100%;
+    height: 300px;
+  }
+
+  .header-content {
+    margin-bottom: -300px;
+  }
+
+  .title {
+    font-size: 1.3em;
+    text-align: center;
+    margin-bottom: 350px;
+  }
+
+  .footer-info p {
+    font-size: 9px;
   }
 }
 
