@@ -1071,6 +1071,10 @@ section {
   .card-apresentacao {
     width: auto;
     height: auto;
+    
+  }
+
+  .card-apresentacao p {
     font-size: 1.2rem;
     font-family: Tahoma;
   }
@@ -1174,6 +1178,9 @@ section {
   .card-apresentacao {
     width: auto;
     height: auto;
+  }
+
+  .card-apresentacao p {
     font-size: 1.2rem;
     font-family: Tahoma;
   }
