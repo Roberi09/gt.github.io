@@ -356,6 +356,7 @@ section {
   width: 400px;
   height: 400px;
   font-family: Tahoma;
+  perspective: 1000px;
 }
 
 .title {
@@ -388,7 +389,8 @@ section {
   
 }
 
-.flip-card:hover .flip-card-inner {
+.flip-card:hover .flip-card-inner,
+.flip-card.flipped .flip-card-inner {
   transform: rotateY(180deg);
 }
 
@@ -415,29 +417,7 @@ section {
 .flip-card-back {
   background-color: #420808;
   color: white;
-  transform: rotateY(180deg);
-}
-
-/* MEDIA QUERIES AREAS DE ATUAÇÃO */
-@media screen and (max-width: 1285px) {
-  .cards-wrapper {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media screen and (max-width: 900px) {
-  .cards-wrapper {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .cards-wrapper {
-    padding: 4rem 2rem;
-  }
-  .card {
-    max-width: calc(100vw - 4rem);
-  }
+  transform: rotateY(180deg);   
 }
 
 /* Seção de Contato */
