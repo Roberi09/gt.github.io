@@ -905,10 +905,6 @@ section {
 
 /* --- Responsivos --- */
 @media (max-width: 1024px) {
-  .flip-card {
-    cursor: default;
-  }
-
   .sup-top {
     display: none;
   }
@@ -927,11 +923,6 @@ section {
     padding: 15px;
   }
 
-  .cards-wrapper {
-    justify-content: center;
-    gap: 20px;;
-  }
-
   .card {
     width: calc(50% - 20px);
   }
@@ -948,9 +939,17 @@ section {
     display: none;
   }
 
+  .flip-card .flip-card-inner {
+    transform: none !important;
+  }
+    
+  .flip-card.flipped .flip-card-inner {
+    transform: none !important;
+  }
+    
   .flip-card {
-    width: 300px;
-    height: 300px;
+    cursor: default;
+    pointer-events: none;
   }
 
   .title {
@@ -982,11 +981,6 @@ section {
   .container, .container1 {
     width: 95%;
     padding: 15px;
-  }
-
-  .cards-wrapper {
-    justify-content: center;
-    gap: 20px;
   }
 
   .card {
@@ -1026,8 +1020,17 @@ section {
     margin-bottom: 50px;
   }
 
+  .flip-card .flip-card-inner {
+    transform: none !important;
+  }
+    
+  .flip-card.flipped .flip-card-inner {
+    transform: none !important;
+  }
+    
   .flip-card {
     cursor: default;
+    pointer-events: none;
   }
 
   .title {
@@ -1048,12 +1051,6 @@ section {
 
   #menu-main {
     display: none;
-  }
-
-  .cards-wrapper {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
   }
 
   .logo img {
@@ -1110,8 +1107,17 @@ section {
     display: none;
   }
 
+  .flip-card .flip-card-inner {
+    transform: none !important;
+  }
+    
+  .flip-card.flipped .flip-card-inner {
+    transform: none !important;
+  }
+    
   .flip-card {
     cursor: default;
+    pointer-events: none;
   }
 
   .title {
@@ -1150,12 +1156,6 @@ section {
 
   #menu-main {
     display: none;
-  }
-
-  .cards-wrapper {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
   }
 
   .cards-container {
@@ -1212,8 +1212,17 @@ section {
     display: none;
   }
 
+  .flip-card .flip-card-inner {
+    transform: none !important;
+  }
+    
+  .flip-card.flipped .flip-card-inner {
+    transform: none !important;
+  }
+    
   .flip-card {
     cursor: default;
+    pointer-events: none;
   }
 
   .title {
@@ -1270,10 +1279,19 @@ section {
   }
 
   .container, .container1 {
-      width: 98%;
+    width: 98%;
   }
 
+  .flip-card .flip-card-inner {
+    transform: none !important;
+  }
+    
+  .flip-card.flipped .flip-card-inner {
+    transform: none !important;
+  }
+    
   .flip-card {
     cursor: default;
+    pointer-events: none;
   }
 }
