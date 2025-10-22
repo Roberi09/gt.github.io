@@ -904,24 +904,13 @@ section {
 }
 
 /* --- Responsivos --- */
-@media (min-width: 1025px) {
-  .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-  }
-}
-
 @media (max-width: 1024px) {
   .flip-card {
-    -webkit-tap-highlight-color: transparent;
-    cursor: pointer;
+    cursor: default;
   }
 
   .flip-card:hover .flip-card-inner {
-    transform: none !important;
-  }
-  
-  .flip-card.flipped .flip-card-inner {
-    transform: rotateY(180deg) !important;
+    transform: rotateY(180deg);
   }
 
   .sup-top {
@@ -1042,17 +1031,10 @@ section {
   }
 
   .flip-card {
-    width: 300px;
-    height: 300px;
-    -webkit-tap-highlight-color: transparent;
-    cursor: pointer;
+    cursor: default;
   }
   
   .flip-card:hover .flip-card-inner {
-    transform: none;
-  }
-  
-  .flip-card.flipped .flip-card-inner {
     transform: rotateY(180deg);
   }
 
@@ -1137,17 +1119,10 @@ section {
   }
 
   .flip-card {
-    width: 280px;
-    height: 280px;
-    -webkit-tap-highlight-color: transparent;
-    cursor: pointer;
+    cursor: default;
   }
   
   .flip-card:hover .flip-card-inner {
-    transform: none;
-  }
-  
-  .flip-card.flipped .flip-card-inner {
     transform: rotateY(180deg);
   }
 
@@ -1250,17 +1225,10 @@ section {
   }
 
   .flip-card {
-    width: 260px;
-    height: 260px;
-    -webkit-tap-highlight-color: transparent;
-    cursor: pointer;
+    cursor: default;
   }
   
   .flip-card:hover .flip-card-inner {
-    transform: none;
-  }
-  
-  .flip-card.flipped .flip-card-inner {
     transform: rotateY(180deg);
   }
 
@@ -1322,15 +1290,10 @@ section {
   }
 
   .flip-card {
-    -webkit-tap-highlight-color: transparent;
-    cursor: pointer;
+    cursor: default;
   }
   
   .flip-card:hover .flip-card-inner {
-    transform: none;
-  }
-  
-  .flip-card.flipped .flip-card-inner {
     transform: rotateY(180deg);
   }
 }
