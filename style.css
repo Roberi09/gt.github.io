@@ -357,6 +357,7 @@ section {
   height: 400px;
   font-family: Tahoma;
   perspective: 1000px;
+  cursor: pointer;
 }
 
 .title {
@@ -903,7 +904,28 @@ section {
 }
 
 /* --- Responsivos --- */
+@media (min-width: 1025px) {
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+}
+
 @media (max-width: 1024px) {
+  .flip-card {
+    width: 300px;
+    height: 300px;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: none;
+  }
+  
+  .flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
   .sup-top {
     display: none;
   }
@@ -1021,6 +1043,21 @@ section {
     margin-bottom: 50px;
   }
 
+  .flip-card {
+    width: 300px;
+    height: 300px;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: none;
+  }
+  
+  .flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
   .title {
     margin-bottom: 380px;
   }
@@ -1102,8 +1139,24 @@ section {
   }
 
   .flip-card {
-    width: 300px;
-    height: 300px;
+    width: 280px;
+    height: 280px;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: none;
+  }
+  
+  .flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .title {
+    font-size: 1.3em;
+    text-align: center;
+    margin-bottom: 350px;
   }
 
   .form-container {
@@ -1120,12 +1173,6 @@ section {
 
   .section-title {
     margin-bottom: 20px;
-  }
-
-  .title {
-    font-size: 1.3em;
-    text-align: center;
-    margin-bottom: 350px;
   }
 
   .footer-info p {
@@ -1205,8 +1252,24 @@ section {
   }
 
   .flip-card {
-    width: 300px;
-    height: 300px;
+    width: 260px;
+    height: 260px;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: none;
+  }
+  
+  .flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .title {
+    font-size: 1.3em;
+    text-align: center;
+    margin-bottom: 310px;
   }
 
   .form-container {
@@ -1238,12 +1301,6 @@ section {
     margin-bottom: -300px;
   }
 
-  .title {
-    font-size: 1.3em;
-    text-align: center;
-    margin-bottom: 350px;
-  }
-
   .footer-info p {
     font-size: 9px;
   }
@@ -1264,5 +1321,18 @@ section {
 
   .container, .container1 {
       width: 98%;
+  }
+
+  .flip-card {
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: none;
+  }
+  
+  .flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
   }
 }

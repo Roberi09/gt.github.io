@@ -20,3 +20,29 @@ document.addEventListener('DOMContentLoaded', function() {
         auto = setInterval(nextSlide, 4000);
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const flipCards = document.querySelectorAll('.flip-card');
+
+    flipCards.forEach(card => {
+        card.addEventListener('click', function() {
+            if (window.innerWidth <= 1024) {
+                this.classList.toggle('flipped');
+            }
+        });
+   
+        card.addEventListener('mouseleave', function () {
+            if (window.innerWidth > 1024) {
+                this.classListe.remove('flipped');
+            }
+        });
+    });
+
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 1024) {
+            flipCards.forEach(card => {
+                card.addEventList.remove('flipped');
+            });
+        }
+    });
+});
