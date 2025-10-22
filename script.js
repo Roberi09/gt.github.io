@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
- 
     const slider = document.querySelector('.slider');
     const slides = document.querySelectorAll('.slide');
     let current = 0;
@@ -23,25 +22,34 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
     const flipCards = document.querySelectorAll('.flip-card');
-
+    
     flipCards.forEach(card => {
-        card.addEventListener('click', function() {
+        card.addEventListener('click', function(e) {
             if (window.innerWidth <= 1024) {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                flipCards.forEach(otherCard => {
+                    if (otherCard !== this) {
+                        otherCard.classList.remove('flipped');
+                    }
+                });
+                
                 this.classList.toggle('flipped');
-            }
-        });
-   
-        card.addEventListener('mouseleave', function () {
-            if (window.innerWidth > 1024) {
-                this.classListe.remove('flipped');
+                
+                if (this.classList.contains('flipped')) {
+                    setTimeout(() => {
+                        this.classList.remove('flipped');
+                    }, 4000);
+                }
             }
         });
     });
-
+    
     window.addEventListener('resize', function() {
         if (window.innerWidth > 1024) {
             flipCards.forEach(card => {
-                card.addEventList.remove('flipped');
+                card.classList.remove('flipped');
             });
         }
     });

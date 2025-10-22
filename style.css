@@ -912,18 +912,16 @@ section {
 
 @media (max-width: 1024px) {
   .flip-card {
-    width: 300px;
-    height: 300px;
     -webkit-tap-highlight-color: transparent;
     cursor: pointer;
   }
 
   .flip-card:hover .flip-card-inner {
-    transform: none;
+    transform: none !important;
   }
   
   .flip-card.flipped .flip-card-inner {
-    transform: rotateY(180deg);
+    transform: rotateY(180deg) !important;
   }
 
   .sup-top {
