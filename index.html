@@ -6,7 +6,7 @@
     <title>Gisele Teles - Advocacia e Consultoria Jurídica</title>
     <link rel="website icon" type="png"
     href="img/logovinho.png">
-    <link rel="preload" as="image" href="img/foto_prof44.jpg" fetchpriority="high">
+    <link rel="preload" as="image" href="img/foto_prof44.webp" fetchpriority="high">
     <link rel="stylesheet" href="style.css?v=1.1">
 </head>
 <body>
@@ -124,20 +124,18 @@
     <p>Agende uma consulta para analisarmos o seu caso.</p>
     <p>O primeiro contato é sem compromisso.</p>
 </div>
-
+ 
 <div class="form-container">
-  <form class="form" name="contato" method="POST" data-netlify="true">
-    <input placeholder="Nome Completo" type="text" class="input" required>
+  <form class="form" id="form-wpp" onsubmit="enviarWhatsApp(event)">
+    <input placeholder="Nome Completo" id="nome" type="text" class="input" required>
     <input placeholder="Telefone" id="telefone" type="tel" class="input" required>
     <input placeholder="Email" id="mail" type="email" class="input">
-    <input type="hidden" name="form-name" value="contato">
-    <textarea placeholder="Descreva brevemente o seu caso" rows="10" cols="30" id="message" name="message" class="textarea" required></textarea>
-    
+    <textarea placeholder="Descreva brevemente o seu caso" rows="10" cols="30" id="message" class="textarea" required></textarea>
     <div class="button-container">
-        <button type="submit" class="send-button">Enviar Mensagem</button>
+        <button type="submit" class="send-button">Enviar no WhatsApp</button>
         <button type="reset" class="reset-button">Limpar</button>
     </div>
-    </form>
+  </form>
 </div>
 
 </main>

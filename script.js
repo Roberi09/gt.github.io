@@ -57,3 +57,21 @@ document.addEventListener('DOMContentLoaded', function() {
         }, { threshold: 0.15 }).observe(section);
     }
 });
+
+// ── Formulário → WhatsApp ──
+function enviarWhatsApp(e) {
+    e.preventDefault();
+ 
+    const nome     = document.getElementById('nome').value.trim();
+    const telefone = document.getElementById('telefone').value.trim();
+    const email    = document.getElementById('mail').value.trim();
+    const mensagem = document.getElementById('message').value.trim();
+ 
+    const texto = `Olá, Gisele! Vim pelo site e gostaria de uma consulta.%0A%0A`
+        + `*Nome:* ${nome}%0A`
+        + `*Telefone:* ${telefone}%0A`
+        + (email ? `*Email:* ${email}%0A` : '')
+        + `%0A*Caso:*%0A${mensagem}`;
+ 
+    window.open(`https://wa.me/5582991574846?text=${texto}`, '_blank');
+}
