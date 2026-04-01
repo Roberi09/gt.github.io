@@ -1,6 +1,13 @@
 /* ── Reset & Base ── */
 body, h1, h2, h3, p, ul, li, a { margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
 
+:root {
+    --gold: #f4b56c;
+    --gold-light: #e2c97e;
+    --white: #ffffff;
+    --text-dark: #1a1a2e;
+}
+
 html, body {
   line-height: 1.6;
   background-color: #420808;
@@ -279,61 +286,42 @@ section { padding: 40px 0; }
 .about-foto.about-saiu  { transform: translateX(-120px); opacity: 0; }
 .about-texto.about-saiu { transform: translateX(120px);  opacity: 0; }
 
-/* ── Áreas de Atuação (slider auto) ── */
-.card {
-  width: 100%;
-  height: 90%;
-  border: 3px solid #f4b56c;
-  border-radius: 8px;
-  color: white;
-  text-align: center;
-  background-color: #420808;
-}
+/* ── Áreas de Atuação ── */
+.sobre-content h2 em { color: var(--gold); font-style: italic; }
 
-.card p1 {
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 3rem;
-  color: #f4b56c;
-}
-
-.card p {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 2rem;
-  color: white;
-  margin-top: 60px;
-}
-
-.slider {
-  width: 100%;
-  height: var(--height);
-  overflow: hidden;
-  mask-image: linear-gradient(to right, transparent, #000 10% 90%, transparent);
-}
-
-.slider .list {
-  display: flex;
-  width: 100%;
-  min-width: calc(var(--width) * var(--quantity));
-  position: relative;
-}
-
-.slider .list .item {
-  width: var(--width);
-  height: var(--height);
-  position: absolute;
-  left: 100%;
-  animation: autoRun 10s linear infinite;
-  transition: filter 0.5s;
-  animation-delay: calc((10s / var(--quantity)) * (var(--position) - 1) - 10s) !important;
-}
-
-@keyframes autoRun {
-  from { left: 100%; }
-  to   { left: calc(var(--width) * -1); }
-}
-
-.slider:hover .item { animation-play-state: paused !important; filter: grayscale(1); }
-.slider .item:hover  { filter: grayscale(0); }
+.areas {
+    background: var(--navy); padding: 8rem 8%;
+    position: relative; overflow: hidden;
+  }
+  .areas::before {
+    content: ""; position: absolute; inset: 0;
+    background: repeating-linear-gradient(45deg,transparent,transparent 40px,rgba(201,168,76,0.018) 40px,rgba(201,168,76,0.018) 41px);
+  }
+  .areas-header { text-align: center; margin-bottom: 5rem; }
+  .areas-header h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(2rem, 3vw, 3.2rem); font-weight: 300;
+    color: var(--white); margin-top: 0.5rem;
+  }
+  .areas-header h2 em { color: var(--gold); font-style: italic; }
+.areas-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 1px; position: relative; z-index: 1; max-width: 1200px; margin: 0 auto; padding: 0 20px;
+  }
+  .area-card {
+    background: rgba(255,255,255,0.025); border: 1px solid rgba(201,168,76,0.14);
+    padding: 2.5rem 2.2rem; transition: all 0.4s; cursor: default;
+  }
+  .area-card:hover {
+    background: rgba(201,168,76,0.09); border-color: rgba(201,168,76,0.45);
+    transform: translateY(-5px);
+  }
+  .area-icon { font-size: 1.8rem; margin-bottom: 1.2rem; display: block; }
+  .area-card h3 {
+    font-family: 'Georgia', serif; font-size: 1.60rem;
+    font-weight: 500; color: var(--gold-light); margin-bottom: 0.8rem;
+  }
+  .area-card p { color: var(--white); font-family: 'Open Sans', sans-serif; font-size: 0.95rem; line-height: 1.75;}
 
 /* ── Contato ── */
 #contact .button {
